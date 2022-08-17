@@ -1,4 +1,14 @@
 /* styles go here */
 .field-set {
+  margin: 10px;
+}
+
+.form-field {
   display: block;
+  margin: 8px;
+}
+
+.radio-form {
+  display: inline;
+  margin: 8px;
 }
