@@ -14,21 +14,30 @@
     <h1>HTML Form</h1>
     <form
     action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-    method="post"
+    method="post" autocomplete="off"
     >
       <fieldset class="field-set">
         <legend>Personal information</legend>
         <label class="form-field">
         Surname:
-          <input type="text" name="Surname">
+          <input
+          class="form"
+          type="text"
+          name="Surname"
+
+          >
         </label>
         <label class="form-field">
         Name:
-          <input type="text" name="Name">
+          <input
+          class="form"
+          type="text"
+          name="Name">
         </label>
         <label class="form-field">
         How old are you?
           <input
+        class="form"
         type="number"
         name="How old are you"
         min="1"
@@ -38,11 +47,17 @@
         </label>
         <label class="form-field">
         Full date of birth:
-          <input type="date" name="Full date of birth">
+          <input
+          class="form"
+          type="date"
+          name="Full date of birth">
         </label>
         <label class="form-field">
         I accept the therm of the agreement
-          <input type="checkbox" name="I accept">
+          <input
+          class="form"
+          type="checkbox"
+          name="I accept">
         </label>
       </fieldset>
 
@@ -51,16 +66,20 @@
         <label class="form-field">
         E-mail:
           <input
+          class="form"
           type="email"
           name="Mail"
-          value="email@example.com"
+          placeholder="email@example.com"
           required>
         </label>
         <label class="form-field">
         Password:
           <input
+          class="form"
           type="password"
           name="Password"
+          minlength="5"
+          maxlength="20"
           required>
         </label>
       </fieldset>
@@ -68,10 +87,11 @@
       <fieldset class="field-set">
         <legend>An interesting fact about you!</legend>
 
-        <div class="radio-form">
+        <div class="form-field">
           Do you love cats?
           <label class="radio-form">
             <input
+            class="form"
             type="radio"
             name="love cat"
             value="yes"
@@ -81,6 +101,7 @@
           </label>
           <label class="radio-form">
             <input
+            class="form"
             type="radio"
             name="love cat"
             value="no"
@@ -91,20 +112,78 @@
         <label class="form-field">
           What is your faivorite color?
           <select
+          class="form"
           name="color"
           required
         >
+            <option disabled selected>Choose a color</option>
             <option value="#f00">Red</option>
             <option value="#0f0">Green</option>
             <option value="#00f">Blue</option>
           </select>
-
-
         </label>
 
+        <label class="form-field">
+      What time do you go to bed?
+          <input
+          class="form"
+          type="time"
+          name="time"
+          step="1">
+        </label>
 
+        <label class="form-field">
+          What are your favorite brand of cars?
+          <select
+          class="form"
+          name="cars"
+          multiple
+        >
+            <option >BMW</option>
+            <option >Audi</option>
+            <option >Lada</option>
+          </select>
+        </label>
 
+        <label class="form-field">
+          How do you rate out work?, %
+          <input
+              class="form"
+              type="range"
+              name="range out work"
+              min="0"
+              max="100"
+              value="0"
+          >
+        </label>
 
+      </fieldset>
+
+      <fieldset class="field-set">
+        <legend>Additional info:</legend>
+        <label class="form-field">
+          Comments:
+          <textarea
+          class="form"
+          name="comments"
+          cols="30"
+          rows="3"
+          >
+          </textarea>
+        </label>
+
+        <label class="form-field">
+          Would you recomend us?
+          <select
+          class="form"
+          name="Recomend"
+
+        >
+            <option>yes</option>
+            <option >no</option>
+
+          </select>
+        </label>
       </fieldset>
 
 
